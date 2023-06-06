@@ -1,35 +1,83 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import Form from "./components/form";
+import Card from "./components/card";
 
-function App() {
-  const [count, setCount] = useState(0)
+const onepieceList = [
+  {
+    name: "Luffy",
+    imageSrc:
+      "https://static.vecteezy.com/ti/vecteur-libre/p1/16552335-luffy-kawai-chibi-mignon-anime-one-piece-conception-de-vecteur-et-art-de-griffonnage-pour-icone-logo-collection-et-autres-gratuit-vectoriel.jpg",
+    description:
+      "Babybel goat camembert de normandie. Cream cheese mascarpone cheddar danish fontina cauliflower cheese caerphilly mascarpone cheese strings. Ricotta fondue emmental taleggio the big cheese lancashire chalk and cheese stinking bishop. When the cheese comes out everybody's happy say cheese cut the cheese.",
+  },
+  {
+    name: "Zoro",
+    imageSrc:
+      "https://static.vecteezy.com/ti/vecteur-libre/p1/16552343-zoro-kawai-chibi-mignon-anime-one-piece-conception-de-vecteur-et-art-de-griffonnage-pour-icone-logo-collection-et-autres-gratuit-vectoriel.jpg",
+    description:
+      "Babybel goat camembert de normandie. Cream cheese mascarpone cheddar danish fontina cauliflower cheese caerphilly mascarpone cheese strings. Ricotta fondue emmental taleggio the big cheese lancashire chalk and cheese stinking bishop. When the cheese comes out everybody's happy say cheese cut the cheese",
+  },
+  {
+    name: "Ussop",
+    imageSrc:
+      "https://static.vecteezy.com/ti/vecteur-libre/p1/16552337-ussop-kawai-chibi-mignon-anime-one-piece-conception-de-vecteur-et-art-de-griffonnage-pour-icone-logo-collection-et-autres-gratuit-vectoriel.jpg",
+    description:
+      "Babybel goat camembert de normandie. Cream cheese mascarpone cheddar danish fontina cauliflower cheese caerphilly mascarpone cheese strings. Ricotta fondue emmental taleggio the big cheese lancashire chalk and cheese stinking bishop. When the cheese comes out everybody's happy say cheese cut the cheese",
+  },
+  {
+    name: "Chopper",
+    imageSrc:
+      "https://static.vecteezy.com/ti/vecteur-libre/p1/16552334-chooper-kawai-chibi-mignon-anime-one-piece-conception-de-vecteur-et-art-de-griffonnage-pour-icone-logo-collection-et-autres-gratuit-vectoriel.jpg",
+    description:
+      "Babybel goat camembert de normandie. Cream cheese mascarpone cheddar danish fontina cauliflower cheese caerphilly mascarpone cheese strings. Ricotta fondue emmental taleggio the big cheese lancashire chalk and cheese stinking bishop. When the cheese comes out everybody's happy say cheese cut the cheese",
+  },
+  {
+    name: "Nami",
+    imageSrc:
+      "https://static.vecteezy.com/ti/vecteur-libre/p1/16552339-nami-kawai-chibi-mignon-anime-one-piece-conception-de-vecteur-et-art-de-griffonnage-pour-icone-logo-collection-et-autres-gratuit-vectoriel.jpg",
+    description:
+      "Babybel goat camembert de normandie. Cream cheese mascarpone cheddar danish fontina cauliflower cheese caerphilly mascarpone cheese strings. Ricotta fondue emmental taleggio the big cheese lancashire chalk and cheese stinking bishop. When the cheese comes out everybody's happy say cheese cut the cheese",
+  },
+  {
+    name: "Sanji",
+    imageSrc:
+      "https://static.vecteezy.com/ti/vecteur-libre/p1/16552342-sanji-kawai-chibi-mignon-anime-one-piece-conception-de-vecteur-et-art-de-griffonnage-pour-icone-logo-collection-et-autres-gratuit-vectoriel.jpg",
+    description:
+      "Babybel goat camembert de normandie. Cream cheese mascarpone cheddar danish fontina cauliflower cheese caerphilly mascarpone cheese strings. Ricotta fondue emmental taleggio the big cheese lancashire chalk and cheese stinking bishop. When the cheese comes out everybody's happy say cheese cut the cheese",
+  },
+  {
+    name: "Franky",
+    imageSrc:
+      "https://static.vecteezy.com/ti/vecteur-libre/p1/16552340-frankie-kawai-chibi-mignon-anime-one-piece-conception-de-vecteur-et-art-de-griffonnage-pour-icone-logo-collection-et-autres-gratuit-vectoriel.jpg",
+    description:
+      "Babybel goat camembert de normandie. Cream cheese mascarpone cheddar danish fontina cauliflower cheese caerphilly mascarpone cheese strings. Ricotta fondue emmental taleggio the big cheese lancashire chalk and cheese stinking bishop. When the cheese comes out everybody's happy say cheese cut the cheese",
+  },
+  {
+    name: "Jimbe",
+    imageSrc:
+      "https://static.vecteezy.com/ti/vecteur-libre/p1/16552341-jimbei-kawai-chibi-mignon-anime-one-piece-conception-de-vecteur-et-art-de-griffonnage-pour-icone-logo-collection-et-autres-gratuit-vectoriel.jpg",
+    description:
+      "Babybel goat camembert de normandie. Cream cheese mascarpone cheddar danish fontina cauliflower cheese caerphilly mascarpone cheese strings. Ricotta fondue emmental taleggio the big cheese lancashire chalk and cheese stinking bishop. When the cheese comes out everybody's happy say cheese cut the cheese",
+  },
+];
 
+const App = () => {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Form />
+      <div id="containercard">
+        <Card onepieceList={onepieceList[0]} />
+        <Card onepieceList={onepieceList[1]} />
+        <Card onepieceList={onepieceList[2]} />
+        <Card onepieceList={onepieceList[3]} />
+        <Card onepieceList={onepieceList[4]} />
+        <Card onepieceList={onepieceList[5]} />
+        <Card onepieceList={onepieceList[6]} />
+        <Card onepieceList={onepieceList[7]} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

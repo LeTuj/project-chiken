@@ -1,0 +1,25 @@
+.OnepieceCard {
+    margin-top: 70px;
+    background-color: rgb(7, 57, 79);
+    border: 5px ridge rgb(94, 86, 86);
+}
+
+img {
+    width: 350px;
+}
+#name {
+    font-size: 35px;
+    width: 280px;
+    text-align: center;
+    margin-left: 27px;
+    color: blanchedalmond;
+}
+
+#description {
+
+    color: blanchedalmond;
+    font-size: 20px;
+    width: 280px;
+    text-align: justify;
+    margin-left: 27px;
+}
